@@ -1,66 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Multiplication Table </title>
-
-
-
-<style>
-body{background-color:#047597 ;}
-
-#inputNumber{margin-left: 500px;
-   margin-top: 100px;
-width: 10%;
-border: 5px solid #3600f9;
-border-radius: 23px;
-}
-
-
-input{color: black;
-padding: 12px 23px;
-background-color: #00ffe7;
-font-size: 45px;
-font-weight: 400;
-font-family: 'Times New Roman', Times, serif;}
-
-
-#multiplicationTable{
-    color: white;
-    margin-left: 525px;
-    margin-top: 40px;
-    font-size:25px ;
-}
-
-
-</style>
-</head>
-<body>
-
-    <input type="number" id="inputNumber" placeholder="Enter a number">
-<div id="multiplicationTable"></div>
-
-<script>
-
-  document.getElementById('inputNumber').addEventListener('input', generateTable);
-
-  function generateTable() {
-    var number = document.getElementById('inputNumber').value;
-    var tableHTML = '';
-
-    if (number == 2) { 
-      tableHTML += '<table>';
-      for (var i = 1; i <= 10; i++) {
-        tableHTML += '<tr><td>' + number + ' × ' + i + '</td><td>' + '=' + (number * i) + '</td></tr>';
-      }
-      tableHTML += '</table>';
-    }
-
-    document.getElementById('multiplicationTable').innerHTML = tableHTML;
-  }
-
-</script>
-
-</body>
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Multiplication Table</title> 
+ <link rel="stylesheet" href="index.css">
+ </head> 
+ <body> 
+  <div class="navbar"> 
+   <div class="logo"><h2>The Tables</h2> </div>
+  <div class="nav-list">
+    <ul class="content">
+      <a href="#">
+          <li>HOME</li>
+          </a>
+          <a href="#">
+              <li>ABOUT US</li>
+              </a>
+            
+              <a href="#">
+                  <li>REVIEWS</li>
+              </a>
+              <a href="#">
+                  <li>CONTACT US</li>
+              </a>
+            </ul>  
+          </div>
+   
+   <div class="log-in-button">
+    <button href="#"> login</button>
+  </div>
+  </div> 
+  <div class="container"> 
+   <div class="input"> 
+    <input type="number" id="inputNumber" placeholder="Enter a number"> 
+   </div> 
+   <div id="tableContainer">  
+   </div> 
+  </div> 
+  <script src="index.js">
+ 
+</script> 
+ </body>
 </html>
